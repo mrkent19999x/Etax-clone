@@ -1,0 +1,66 @@
+<div class="page">
+    <!-- Header -->
+    <div class="page-header">
+        <button class="back-btn">←</button>
+        <h1 class="page-title">Tài khoản</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="page-content" style="padding-bottom: 80px;">
+        <!-- User Info -->
+        <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: center;">
+            <div style="width: 80px; height: 80px; background: #1976D2; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px;">
+                👤
+            </div>
+            <div style="font-weight: 600; font-size: 18px; margin-bottom: 4px;" id="user-name"></div>
+            <div style="color: #666; font-size: 14px;" id="user-tax-code"></div>
+        </div>
+
+        <!-- Menu Items -->
+        <div style="background: white; border-radius: 8px; overflow: hidden;">
+            <a href="#" style="display: flex; align-items: center; padding: 16px; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: #333;">
+                <span style="margin-right: 12px;">📱</span>
+                <span style="flex: 1;">Thông tin cá nhân</span>
+                <span>→</span>
+            </a>
+            <a href="#" style="display: flex; align-items: center; padding: 16px; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: #333;">
+                <span style="margin-right: 12px;">🔔</span>
+                <span style="flex: 1;">Thông báo</span>
+                <span>→</span>
+            </a>
+            <a href="#" style="display: flex; align-items: center; padding: 16px; border-bottom: 1px solid #f0f0f0; text-decoration: none; color: #333;">
+                <span style="margin-right: 12px;">⚙️</span>
+                <span style="flex: 1;">Cài đặt</span>
+                <span>→</span>
+            </a>
+            <a href="#" data-page="home" style="display: flex; align-items: center; padding: 16px; text-decoration: none; color: #d32f2f;">
+                <span style="margin-right: 12px;">🚪</span>
+                <span style="flex: 1;">Đăng xuất</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Nav -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item" data-page="home">
+            <span>🏠</span>
+            <span>Trang chủ</span>
+        </a>
+        <a href="#" class="nav-item" data-page="invoice">
+            <span>📄</span>
+            <span>Hóa đơn</span>
+        </a>
+        <a href="#" class="nav-item active" data-page="profile">
+            <span>👤</span>
+            <span>Tài khoản</span>
+        </a>
+    </div>
+</div>
+
+<script>
+// Load user info từ mock data
+if (window.mockData && window.mockData.user) {
+    document.getElementById('user-name').textContent = window.mockData.user.name;
+    document.getElementById('user-tax-code').textContent = 'MST: ' + window.mockData.user.taxCode;
+}
+</script>

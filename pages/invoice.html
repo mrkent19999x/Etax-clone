@@ -1,0 +1,50 @@
+<div class="page">
+    <!-- Header -->
+    <div class="page-header">
+        <button class="back-btn">←</button>
+        <h1 class="page-title">Hóa đơn</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="page-content" style="padding-bottom: 80px;">
+        <div id="invoice-list">
+            <!-- Invoice items - sẽ render từ mock data -->
+        </div>
+    </div>
+
+    <!-- Bottom Nav -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item" data-page="home">
+            <span>🏠</span>
+            <span>Trang chủ</span>
+        </a>
+        <a href="#" class="nav-item active" data-page="invoice">
+            <span>📄</span>
+            <span>Hóa đơn</span>
+        </a>
+        <a href="#" class="nav-item" data-page="profile">
+            <span>👤</span>
+            <span>Tài khoản</span>
+        </a>
+    </div>
+</div>
+
+<script>
+// Render invoices từ mock data
+const invoiceList = document.getElementById('invoice-list');
+if (window.mockData && window.mockData.invoices) {
+    invoiceList.innerHTML = window.mockData.invoices.map(inv => `
+        <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <strong>${inv.number}</strong>
+                <span style="color: #4CAF50;">✓ ${inv.status}</span>
+            </div>
+            <div style="color: #666; font-size: 14px; margin-bottom: 4px;">${inv.company}</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                <span style="color: #666; font-size: 14px;">${inv.date}</span>
+                <strong style="color: #1976D2; font-size: 16px;">${inv.amount.toLocaleString('vi-VN')} đ</strong>
+            </div>
+        </div>
+    `).join('');
+}
+</script>

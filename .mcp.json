@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "minimax": {
+      "command": "uvx",
+      "args": ["minimax-mcp", "-y"],
+      "env": {
+        "MINIMAX_API_KEY": "your-minimax-api-key-here",
+        "MINIMAX_MCP_BASE_PATH": "/workspace/etax-clean/output",
+        "MINIMAX_API_HOST": "https://api.minimax.io"
+      }
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["@figma/mcp-server", "-y"],
+      "env": {
+        "FIGMA_TOKEN": "your-figma-token-here"
+      }
+    },
+    "browser": {
+      "command": "node",
+      "args": ["/workspace/mcp-tools/browser-mcp/dist/index.js"],
+      "env": {
+        "HEADLESS": "false"
+      }
+    },
+    "inspect": {
+      "command": "node",
+      "args": ["/workspace/mcp-tools/inspect-mcp/dist/index.js"],
+      "env": {
+        "HEADLESS": "false"
+      }
+    },
+    "superdesign": {
+      "command": "node",
+      "args": ["/workspace/mcp-tools/superdesign-mcp/dist/index.js"],
+      "env": {
+        "SUPERDESIGN_OUTPUT_PATH": "/workspace/etax-clean/.superdesign"
+      }
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp"]
+    },
+    "imagesorcery": {
+      "command": "python",
+      "args": ["-m", "imagesorcery_mcp"],
+      "env": {
+        "MODELS_PATH": "/workspace/mcp-tools/models"
+      }
+    },
+    "cv-tools": {
+      "command": "python",
+      "args": ["/workspace/mcp-tools/cv-tools/main.py"],
+      "env": {
+        "DOCKER_ENABLED": "true"
+      }
+    }
+  }
+}

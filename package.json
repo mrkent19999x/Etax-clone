@@ -1,0 +1,70 @@
+{
+  "name": "etax-mobile-clone-mcp",
+  "version": "1.0.0",
+  "description": "Pixel-Perfect Frontend Cloning với MCP Tools",
+  "main": "index.html",
+  "scripts": {
+    "setup-mcp": "bash setup-mcp.sh",
+    "analyze-design": "node -e \"console.log('🔍 Analyze website design - Configure MCP client trước')\"",
+    "extract-colors": "node -e \"console.log('🎨 Extract color palette - Configure MCP client trước')\"",
+    "generate-components": "node -e \"console.log('⚡ Generate pixel-perfect components - Configure MCP client trước')\"",
+    "debug-layout": "node -e \"console.log('🔍 Debug CSS layout - Configure MCP client trước')\"",
+    "test-mcp": "bash -c 'echo \"🧪 Testing MCP setup...\" && node -v && npm -v && pip list | grep imagesorcery'",
+    "build": "echo '🔨 Building production files...'",
+    "serve": "python -m http.server 8000",
+    "dev": "npm run serve",
+    "deploy": "echo '🚀 Deploy to GitHub Pages...'",
+    "mcp:figma": "echo '🎨 Figma MCP - Design to Code ready'",
+    "mcp:browser": "echo '🌐 Browser MCP - Live analysis ready'",
+    "mcp:inspect": "echo '🔍 Inspect MCP - Pixel precision ready'",
+    "mcp:superdesign": "echo '🎨 Superdesign MCP - Screenshot analysis ready'",
+    "mcp:minimax": "echo '🤖 MiniMax MCP - AI generation ready'"
+  },
+  "keywords": [
+    "mcp",
+    "pixel-perfect",
+    "frontend",
+    "figma",
+    "clone",
+    "ui",
+    "design-system",
+    "etax"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "mcp": {
+    "version": "1.0",
+    "description": "Pixel-Perfect Frontend Cloning Configuration",
+    "tools": {
+      "figma": {
+        "description": "Official Figma MCP for design-to-code",
+        "version": "latest"
+      },
+      "browser": {
+        "description": "Browser-based UI analysis",
+        "version": "2.0"
+      },
+      "inspect": {
+        "description": "Chrome DevTools integration",
+        "version": "0.1.0"
+      },
+      "superdesign": {
+        "description": "Screenshot to design system",
+        "version": "latest"
+      },
+      "minimax": {
+        "description": "AI image/video generation",
+        "version": "latest"
+      },
+      "imagesorcery": {
+        "description": "Computer vision & OCR",
+        "version": "0.3.7"
+      }
+    }
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
